@@ -1,0 +1,163 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.image{
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.6;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 54rem;
+}
+
+body{
+    z-index: 1;
+    /* height: 100%; */
+    background-color: rgba(0, 0, 0, 0.7);
+    
+}
+.searchdiv{
+    margin: 10px 0 0 10px;  
+}
+#search{
+    width: 10rem;
+    padding: 0.2rem;
+    font-size: 1rem;
+
+}
+
+#herodiv{
+    height: 44.5rem;
+    margin: 10px;
+    width: 23rem;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 5px 20px 4px rgb(0 0 0 / 60%);
+
+}
+
+#hero{
+    height: 18rem;
+    width: 23rem;
+    border-radius: 10px 10px 0 0;
+    visibility: hidden;
+}
+
+#herocontent{
+    display: flex;
+    flex-direction: column;
+    
+}
+#search{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: whitesmoke;
+}
+.info{
+    padding: 0.4rem;
+    margin: 0.2rem;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+.btn{
+    padding: 0.5rem;
+    width: 9rem;
+    margin: 0.2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: 0.3s;
+}
+#name{
+    font-size: 1.8rem;
+}
+#publisher{
+    margin-top: 0.5rem;
+}
+
+@media only screen and (max-width: 415px) {
+    .info{
+        font-size: 1.1;
+    }
+    #herodiv{
+        width: 21rem;
+    }
+    #hero{
+        width: 21rem;
+    }
+    #name{
+        font-size: 1.6rem;
+    }
+}
+@media only screen and (max-width: 380px) {
+    .info{
+        font-size: 1.1;
+    }
+    #herodiv{
+        width: 19rem;
+        height: 43rem;
+    }
+    #hero{
+        width: 19rem;
+    }
+    #name{
+        font-size: 1.3rem;
+    }
+    .image{
+        height: 53rem;
+    }
+}
+@media only screen and (max-width: 345px) {
+    .info{
+        font-size: 1;
+        padding: 0.2rem;
+        margin: 0.2rem;
+    }
+    #herodiv{
+        width: 17rem;
+        height: 43rem;
+    }
+    #hero{
+        width: 17rem;
+    }
+    #name{
+        font-size: 1.2rem;
+    }
+
+}
+@media only screen and (max-width: 310px) {
+    .info{
+        font-size: 0.8;
+        padding: 0.15rem;
+        margin: 0.15rem;
+    }
+    #herodiv{
+        width: 15.5rem;
+        height: 41rem;
+    }
+    #hero{
+        width: 15.5rem;
+    }
+    #name{
+        font-size: 1.1rem;
+    }
+    .image{
+        height: 51rem;
+    }
+
+}
+@media only screen and (max-width: 280px) {
+    #herodiv{
+        margin: 0.3rem;
+    }
+}
