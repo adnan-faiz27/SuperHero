@@ -6,7 +6,7 @@ const power = document.getElementById(`power`);
 const gender = document.getElementById(`gender`);
 const combat = document.getElementById(`combat`);
 const speed = document.getElementById(`speed`);
-const strenght = document.getElementById(`strenght`);
+const strength = document.getElementById(`strenght`);
 const intel = document.getElementById(`intel`);
 const race = document.getElementById(`race`);
 const search = document.getElementById(`search`);
@@ -18,12 +18,11 @@ const superhero=(id)=>
     fetch(`${baseurl}/${id}`)
     .then(response=>response.json())
     .then(json => {
-        console.log(json);
         hero.src=`${json.image.url}`;
         Name.innerText=`Name: ${json.name}`
         publisher.innerText=`Publisher: ${json.biography.publisher}`
         combat.innerText=`Combat: ${json.powerstats.combat}`
-        strenght.innerText=`Strenght: ${json.powerstats.strenght}`
+        strength.innerText=`Strength: ${json.powerstats.strength}`
         speed.innerText=`Speed: ${json.powerstats.speed}`
         race.innerText=`Race: ${json.appearance.race}`
         gender.innerText=`Gender: ${json.appearance.gender}`
@@ -37,12 +36,11 @@ const superheroName=(name)=>
     fetch(`${baseurl}/search/${name}`)
     .then(response=>response.json())
     .then(json => {
-        console.log(json)
         hero.src=`${json.results[0].image.url}`;
         Name.innerText=`Name: ${json.results[0].name}`
         publisher.innerText=`Publisher: ${json.results[0].biography.publisher}`
         combat.innerText=`Combat: ${json.results[0].powerstats.combat}`
-        strenght.innerText=`Strenght: ${json.results[0].powerstats.strenght}`
+        strength.innerText=`Strength: ${json.results[0].powerstats.strength}`
         speed.innerText=`Speed: ${json.results[0].powerstats.speed}`
         race.innerText=`Race: ${json.results[0].appearance.race}`
         gender.innerText=`Gender: ${json.results[0].appearance.gender}`
@@ -57,6 +55,7 @@ function randnum() {
 }
 gethero.onclick=()=> superhero(randnum());
 searchHero.onclick=()=> superheroName(search.value);
+
 
 
 
