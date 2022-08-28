@@ -28,7 +28,7 @@ const superhero=(id)=>
         race.innerText=`Race: ${json.appearance.race}`
         gender.innerText=`Gender: ${json.appearance.gender}`
         power.innerText=`Power: ${json.powerstats.power}`
-        intel.innerText=`Intelligence: ${json.appearance.intelligence}`
+        intel.innerText=`Intelligence: ${json.powerstats.intelligence}`
     })
 }   
 const superheroName=(name)=>
@@ -47,7 +47,7 @@ const superheroName=(name)=>
         race.innerText=`Race: ${json.results[0].appearance.race}`
         gender.innerText=`Gender: ${json.results[0].appearance.gender}`
         power.innerText=`Power: ${json.results[0].powerstats.power}`
-        intel.innerText=`Intelligence: ${json.results[0].appearance.intelligence}`
+        intel.innerText=`Intelligence: ${json.results[0].powerstats.intelligence}`
     })
 }   
 function randnum() {
